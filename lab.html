@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive HTML, CSS and JavaScript demonstrations by Jay Parmar.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Canvas, API, web development">
+    <meta name="author" content="Jay Parmar">
+    <meta property="og:title" content="Web Lab | Jay Parmar">
+    <meta property="og:description" content="A responsive interactive web development demonstration lab.">
+    <title>Web Lab | Jay Parmar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="lab-page">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Jay<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="lab.html">Web Lab</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="page-header lab-hero">
+            <div class="container">
+                <p class="eyebrow">INTERACTIVE SHOWCASE</p>
+                <h1>Web Lab<span class="lab-mark">+</span></h1>
+                <p class="lab-intro">A hands-on index of the browser skills behind this portfolio: media, graphics,
+                    events, validation, and data.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding lab-section" aria-labelledby="media-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p>01 / MEDIA &amp; GRAPHICS</p>
+                    <h2 id="media-title">Make the browser sing.</h2>
+                </div>
+                <div class="row g-4">
+                    <article class="col-lg-7">
+                        <div class="lab-card media-card">
+                            <div class="lab-card-heading"><span>Audio / video gallery</span><i
+                                    class="bi bi-play-circle"></i></div><audio controls preload="none"
+                                class="w-100 mb-4">
+                                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                                    type="audio/mpeg">Your browser does not support audio.
+                            </audio><video controls preload="metadata"
+                                poster="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                                class="lab-video">
+                                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                                    type="video/mp4">Your browser does not support video.
+                            </video>
+                            <div class="external-video mt-4"><span>External video</span><iframe
+                                    src="https://www.youtube.com/embed/ScMzIvxBSi4" title="YouTube video player"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe></div>
+                        </div>
+                    </article>
+                    <article class="col-lg-5">
+                        <div class="lab-card art-card">
+                            <div class="lab-card-heading"><span>Canvas / SVG studio</span><i class="bi bi-bezier2"></i>
+                            </div><canvas id="artCanvas" width="560" height="320"
+                                aria-label="Abstract canvas artwork"></canvas><svg class="lab-svg" viewBox="0 0 420 180"
+                                role="img" aria-label="Decorative geometric SVG artwork">
+                                <rect width="420" height="180" fill="#15161d" />
+                                <circle cx="92" cy="90" r="56" fill="#d8ff3e" />
+                                <path d="M170 30 L250 150 L330 30 Z" fill="#ff6b4a" />
+                                <path d="M270 150 L350 30 L410 150 Z" fill="#5874d8" opacity=".9" />
+                            </svg>
+                            <p class="small text-muted mt-3 mb-0">Two lightweight drawing approaches, rendered directly
+                                in the page.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding lab-section lab-section-dark" aria-labelledby="events-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p>02 / EVENT HANDLING</p>
+                    <h2 id="events-title">Click, move, switch, reveal.</h2>
+                </div>
+                <div class="row g-4">
+                    <article class="col-md-6 col-lg-3">
+                        <div class="lab-card event-card"><span class="event-label">Counter</span><output
+                                id="counterValue" class="counter-value" aria-live="polite">0</output>
+                            <div class="d-flex gap-2"><button type="button" id="decrementButton"
+                                    class="btn btn-outline-dark">−</button><button type="button" id="incrementButton"
+                                    class="btn btn-primary">+</button></div>
+                        </div>
+                    </article>
+                    <article class="col-md-6 col-lg-3">
+                        <div class="lab-card event-card"><span class="event-label">Theme switcher</span>
+                            <p>Choose a mood for this lab.</p><select id="themeSelect" class="form-select"
+                                aria-label="Choose background color">
+                                <option value="paper">Paper</option>
+                                <option value="mint">Mint</option>
+                                <option value="peach">Peach</option>
+                                <option value="sky">Sky</option>
+                            </select><button type="button" id="toggleDetails" class="btn btn-outline-dark mt-3">Show
+                                details</button>
+                            <p id="hiddenDetails" class="d-none small mt-3">Events can change styles and visibility
+                                without reloading the page.</p>
+                        </div>
+                    </article>
+                    <article class="col-md-6 col-lg-3">
+                        <div class="lab-card event-card"><span class="event-label">Hover zoom</span><img id="zoomImage"
+                                class="zoom-image"
+                                src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                                alt="Starry night landscape">
+                            <p class="small mt-3 mb-0">Move your pointer over the image.</p>
+                        </div>
+                    </article>
+                    <article class="col-md-6 col-lg-3">
+                        <div class="lab-card event-card"><span class="event-label">Image switcher</span><img
+                                id="switchImage" class="switch-image"
+                                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                                alt="Mountain landscape"><button type="button" id="switchImageButton"
+                                class="btn btn-primary mt-3">Switch image</button></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding lab-section" aria-labelledby="form-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p>03 / VALIDATION</p>
+                    <h2 id="form-title">A form that speaks clearly.</h2>
+                </div>
+                <div class="row g-5 align-items-start">
+                    <div class="col-lg-5">
+                        <p class="lab-lede">Every field gives useful feedback. Passwords need letters and numbers,
+                            mobile numbers stay numeric, and invalid submissions never leave the browser.</p>
+                        <div class="validation-notes"><span>client-side</span><span>accessible errors</span><span>no
+                                page reload</span></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form id="registrationForm" class="lab-card registration-form" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6"><label for="regName">Name</label><input id="regName" name="name"
+                                        class="form-control" type="text"><small class="field-error"
+                                        id="regNameError"></small></div>
+                                <div class="col-md-6"><label for="regEmail">Email</label><input id="regEmail"
+                                        name="email" class="form-control" type="email"><small class="field-error"
+                                        id="regEmailError"></small></div>
+                                <div class="col-md-6"><label for="regPassword">Password</label><input id="regPassword"
+                                        name="password" class="form-control" type="password"><small class="field-error"
+                                        id="regPasswordError"></small></div>
+                                <div class="col-md-6"><label for="regConfirm">Confirm password</label><input
+                                        id="regConfirm" name="confirm" class="form-control" type="password"><small
+                                        class="field-error" id="regConfirmError"></small></div>
+                                <div class="col-md-6"><label for="regMobile">Mobile number</label><input id="regMobile"
+                                        name="mobile" class="form-control" type="tel" inputmode="numeric"
+                                        maxlength="10"><small class="field-error" id="regMobileError"></small></div>
+                                <div class="col-12"><button class="btn btn-primary" type="submit">Create
+                                        account</button>
+                                    <p id="registrationSuccess" class="success-message d-none" role="status">
+                                        Registration details look good.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding lab-section lab-section-dark" aria-labelledby="api-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p>04 / FETCH API</p>
+                    <h2 id="api-title">Bring in live JSON.</h2>
+                </div>
+                <div class="api-toolbar">
+                    <p class="mb-0">A small feed from JSONPlaceholder, fetched and parsed in your browser.</p><button
+                        id="loadPosts" class="btn btn-primary" type="button">Load posts</button>
+                </div>
+                <div id="apiStatus" class="api-status" aria-live="polite">Ready when you are.</div>
+                <div id="postsGrid" class="row g-4"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <h4>Jay<span>.</span></h4>
+                    <p class="mb-0">Computer Engineering Student &amp; Web Developer</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links"><a href="index.html">Home</a><a href="projects.html">Projects</a><a
+                            href="contact.html">Contact</a></div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; <span id="year"></span> Jay Parmar. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lab.js"></script>
+</body>
+
+</html>
